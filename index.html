@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Coinhakook — Privacy-First Crypto Portfolio Journal</title>
+<meta name="description" content="Coinhakook is a privacy-first crypto portfolio journal for iOS. Track holdings, transactions, and market data — all stored locally on your device." />
+<style>
+  :root {
+    --bg-deep: #0a0d14;
+    --bg-card: #11151f;
+    --bg-soft: #161b27;
+    --accent: #00d4a8;
+    --accent-2: #5b8def;
+    --text: #e6ecf5;
+    --muted: #8a93a6;
+    --border: #1f2533;
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  html, body { background: var(--bg-deep); color: var(--text); font-family: -apple-system, BlinkMacSystemFont, "SF Pro Display", "Segoe UI", Roboto, sans-serif; line-height: 1.6; }
+  a { color: var(--accent); text-decoration: none; }
+  a:hover { text-decoration: underline; }
+  .container { max-width: 980px; margin: 0 auto; padding: 0 24px; }
+
+  header { padding: 28px 0; border-bottom: 1px solid var(--border); }
+  .nav { display: flex; justify-content: space-between; align-items: center; }
+  .brand { font-size: 22px; font-weight: 700; letter-spacing: 0.3px; }
+  .brand span { color: var(--accent); }
+  .nav-links a { color: var(--muted); margin-left: 24px; font-size: 15px; }
+  .nav-links a:hover { color: var(--text); }
+
+  .hero { padding: 80px 0 64px; text-align: center; }
+  .badge { display: inline-block; padding: 6px 14px; border-radius: 999px; background: rgba(0,212,168,0.12); color: var(--accent); font-size: 13px; font-weight: 600; margin-bottom: 20px; }
+  .hero h1 { font-size: 48px; font-weight: 800; letter-spacing: -1px; line-height: 1.1; margin-bottom: 18px; }
+  .hero h1 span { background: linear-gradient(90deg, var(--accent), var(--accent-2)); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; }
+  .hero p { font-size: 18px; color: var(--muted); max-width: 640px; margin: 0 auto 28px; }
+  .hero .cta { display: inline-block; padding: 14px 28px; border-radius: 12px; background: var(--accent); color: #0a0d14; font-weight: 700; font-size: 16px; }
+  .hero .cta:hover { background: #00f0bd; text-decoration: none; }
+
+  section.features { padding: 64px 0; }
+  section.features h2 { font-size: 32px; font-weight: 700; text-align: center; margin-bottom: 12px; }
+  section.features .sub { color: var(--muted); text-align: center; margin-bottom: 40px; }
+  .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 20px; }
+  .card { background: var(--bg-card); border: 1px solid var(--border); border-radius: 16px; padding: 24px; }
+  .card .icon { width: 44px; height: 44px; border-radius: 10px; background: rgba(0,212,168,0.14); color: var(--accent); display: flex; align-items: center; justify-content: center; font-size: 22px; margin-bottom: 14px; }
+  .card h3 { font-size: 18px; margin-bottom: 8px; }
+  .card p { color: var(--muted); font-size: 14.5px; }
+
+  section.privacy { padding: 56px 0; background: var(--bg-soft); border-top: 1px solid var(--border); border-bottom: 1px solid var(--border); }
+  .privacy-inner { display: flex; flex-wrap: wrap; gap: 32px; align-items: center; justify-content: space-between; }
+  .privacy-text { flex: 1 1 460px; }
+  .privacy-text h2 { font-size: 30px; margin-bottom: 14px; }
+  .privacy-text p { color: var(--muted); margin-bottom: 12px; }
+  .privacy-points { flex: 1 1 320px; background: var(--bg-card); border: 1px solid var(--border); border-radius: 16px; padding: 24px; }
+  .privacy-points li { list-style: none; padding: 8px 0; border-bottom: 1px dashed var(--border); color: var(--text); font-size: 15px; }
+  .privacy-points li:last-child { border-bottom: none; }
+  .privacy-points li::before { content: "✓ "; color: var(--accent); font-weight: 700; margin-right: 6px; }
+
+  footer { padding: 32px 0; text-align: center; color: var(--muted); font-size: 14px; border-top: 1px solid var(--border); }
+  footer a { color: var(--muted); margin: 0 8px; }
+  footer a:hover { color: var(--text); }
+
+  @media (max-width: 600px) {
+    .hero h1 { font-size: 36px; }
+    .nav-links a { margin-left: 14px; font-size: 14px; }
+  }
+</style>
+</head>
+<body>
+  <header>
+    <div class="container nav">
+      <div class="brand">Coin<span>hakook</span></div>
+      <nav class="nav-links">
+        <a href="#features">Features</a>
+        <a href="#privacy">Privacy</a>
+        <a href="support.html">Support</a>
+        <a href="terms.html">Terms</a>
+        <a href="privacy.html">Privacy Policy</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="container">
+        <span class="badge">iOS · iPhone · iOS 16+</span>
+        <h1>Your crypto, your journal.<br/><span>100% on-device.</span></h1>
+        <p>Coinhakook is a privacy-first portfolio journal for serious holders. Log every transaction, track unrealized PnL, analyze charts, and run simulations — without ever sending a byte to the cloud.</p>
+        <a class="cta" href="https://apps.apple.com">Download on the App Store</a>
+      </div>
+    </section>
+
+    <section class="features" id="features">
+      <div class="container">
+        <h2>Built for serious holders</h2>
+        <p class="sub">A complete command center — pure SwiftUI, no third-party dependencies.</p>
+        <div class="grid">
+          <div class="card">
+            <div class="icon">📒</div>
+            <h3>Granular Journal</h3>
+            <p>Log buys, sells, staking rewards, airdrops, and transfers with venue, fee, tag, and note context. Cost basis and average price recalculate instantly.</p>
+          </div>
+          <div class="card">
+            <div class="icon">📈</div>
+            <h3>Native SwiftUI Charts</h3>
+            <p>Candlesticks with crosshair tooltips, line and mountain area views across six timeframes — overlaid with MA7/25/99 and RSI 14.</p>
+          </div>
+          <div class="card">
+            <div class="icon">⚖️</div>
+            <h3>Rebalancer &amp; DCA</h3>
+            <p>Plan target allocations with slider-driven buy/sell recommendations, stress-test under bull &amp; bear cases, and Monte Carlo DCA simulations.</p>
+          </div>
+          <div class="card">
+            <div class="icon">🔬</div>
+            <h3>Deep Analytics</h3>
+            <p>Six-axis portfolio radar, normalized comparisons of up to four assets, market-cap heatmaps, and tax-ready disposal summaries by year.</p>
+          </div>
+          <div class="card">
+            <div class="icon">🛡️</div>
+            <h3>Privacy by Default</h3>
+            <p>No accounts, no logins, no servers, no telemetry. Every byte lives in encrypted local storage on your device — and only your device.</p>
+          </div>
+          <div class="card">
+            <div class="icon">✨</div>
+            <h3>Polished iOS Experience</h3>
+            <p>Dark-mode interface with fluid haptics and a tab-bar-free detail layout — designed exclusively for iPhone.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="privacy" id="privacy">
+      <div class="container privacy-inner">
+        <div class="privacy-text">
+          <h2>Privacy isn’t a feature. It’s the foundation.</h2>
+          <p>Coinhakook never collects personal data. There are no accounts to create, no email addresses to verify, and no remote servers transmitting your financial history.</p>
+          <p>Your transactions, holdings, and notes are stored locally in encrypted form on your device. You own the data — and the export — at all times.</p>
+          <a href="privacy.html">Read the full Privacy Policy →</a>
+        </div>
+        <ul class="privacy-points">
+          <li>No accounts or sign-in</li>
+          <li>No analytics or tracking SDKs</li>
+          <li>No remote servers — fully offline-capable</li>
+          <li>Encrypted local storage on device</li>
+          <li>Your data, your export, your control</li>
+        </ul>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container">
+      <p>© 2026 Coinhakook. All rights reserved.</p>
+      <p style="margin-top:8px;">
+        <a href="support.html">Support</a> ·
+        <a href="terms.html">Terms of Use</a> ·
+        <a href="privacy.html">Privacy Policy</a>
+      </p>
+      <p style="margin-top:8px;">Contact: <a href="mailto:ecekibi725@gmail.com">ecekibi725@gmail.com</a></p>
+    </div>
+  </footer>
+</body>
+</html>
